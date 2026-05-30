@@ -11,7 +11,7 @@ export const orgInfo = {
   charityNumber: 'Registration in Progress',
   email:         'hello@mtjfoundation.org',
   phone:         '+44 (0)20 0000 0000',           // CUSTOMISE: Replace with real number
-  address:       'London, United Kingdom',         // CUSTOMISE: Replace with full address
+  address:       '4th Floor, Silverstream House, 45 Fitzroy Street, Fitzrovia, London, United Kingdom, W1T 6EB',
   social: {
     twitter:   '#',  // CUSTOMISE: Replace with real social media URLs
     facebook:  '#',
