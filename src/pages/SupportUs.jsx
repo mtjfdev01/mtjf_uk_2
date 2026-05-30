@@ -18,12 +18,12 @@ function PageHero({ eyebrow, title, subtitle }) {
   )
 }
 
-// CUSTOMISE: Volunteering opportunity types — update as your opportunities develop
+// CUSTOMISE: Update as your volunteering opportunities develop
 const volunteerRoles = [
-  { title: 'General Support',     icon: 'community', description: 'Help us with day-to-day tasks as we set up our operations. Every pair of hands counts.' },
-  { title: 'Skilled Volunteering', icon: 'education', description: 'Offer your professional skills in areas like communications, finance, legal, or design to help us get established.' },
-  { title: 'Community Outreach',   icon: 'volunteer', description: 'Help us connect with people and communities. Spread the word about who we are and what we are building.' },
-  { title: 'Fundraising Support',  icon: 'fundraise', description: 'Help us raise our first funds through events, challenges, or online campaigns.' },
+  { title: 'General Support',      icon: 'community', description: 'Help with day-to-day tasks and operations.' },
+  { title: 'Skilled Volunteering', icon: 'education', description: 'Offer professional skills in communications, finance, or design.' },
+  { title: 'Community Outreach',   icon: 'volunteer', description: 'Help us connect with people and communities.' },
+  { title: 'Fundraising Support',  icon: 'fundraise', description: 'Help us raise funds through events or campaigns.' },
 ]
 
 const tabs = [
@@ -40,18 +40,17 @@ export default function SupportUs() {
     <>
       <PageHero
         eyebrow="Support our work"
-        title="Help Us Take Our First Steps"
-        subtitle="We just launched. We have no impact to point to yet — only a clear mission and an honest request for support."
+        title="Get Involved"
+        subtitle="There are several ways to support what we are building. Find the one that is right for you."
       />
 
       {/* ── TAB NAV ───────────────────────────────────────────────────── */}
       <div className="sticky top-20 z-30 bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-none gap-1 py-3">
+          <div className="flex overflow-x-auto gap-1 py-3">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                id={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === tab.id
@@ -67,51 +66,34 @@ export default function SupportUs() {
         </div>
       </div>
 
-      {/* ── DONATE PANEL ──────────────────────────────────────────────── */}
+      {/* ── DONATE ────────────────────────────────────────────────────── */}
       {activeTab === 'donate' && (
         <section className="py-24 lg:py-32 bg-cream">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest-light mb-3">Be our first</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest-light mb-3">Donate</p>
                 <h2 className="font-serif text-4xl md:text-5xl font-bold text-forest-dark mb-6 leading-tight">
-                  Be a Founding Donor
+                  Support Our Work
                 </h2>
                 {/* CUSTOMISE: Replace donation copy */}
-                <p className="text-gray-500 leading-relaxed mb-4">
-                  We have just launched. We have no history, no impressive statistics, and no track record to point to. What we do have is an honest mission, a committed team, and a genuine need for your support.
-                </p>
                 <p className="text-gray-500 leading-relaxed mb-8">
-                  Every penny you give right now will go towards getting our first programmes off the ground — covering essential costs, enabling community listening, and beginning the work we have committed to do.
+                  Your donation goes directly towards enabling our work — covering the essential costs that allow us to operate, listen, and act with purpose.
                 </p>
-
-                {/* What donations fund right now */}
-                <div className="bg-white rounded-2xl p-6 shadow-premium mb-8">
-                  <h4 className="font-semibold text-forest-dark text-sm mb-4">Right now, donations help us:</h4>
-                  <ul className="space-y-3">
-                    {[
-                      'Cover essential operational and registration costs',
-                      'Begin community needs assessment and listening',
-                      'Build the team and volunteer network',
-                      'Develop our first programmes',
-                      'Establish our financial and governance structures',
-                    ].map((p) => (
-                      <li key={p} className="flex items-start gap-3 text-sm text-gray-600">
-                        <Icon name="check" className="w-5 h-5 text-forest flex-shrink-0 mt-0.5" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Honest note */}
-                <div className="bg-forest/5 border border-forest/10 rounded-xl p-5">
-                  <p className="text-xs text-forest-dark leading-relaxed">
-                    <span className="font-semibold">A note of honesty:</span> Our charity registration is in progress. We are not yet able to offer Gift Aid. We will communicate clearly when this changes. Thank you for understanding.
-                  </p>
-                </div>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Donations processed securely',
+                    'Choose a one-time or monthly contribution',
+                    'Full record provided for every donation',
+                    'Gift Aid available once registration is confirmed',
+                  ].map((p) => (
+                    <li key={p} className="flex items-center gap-3 text-sm text-gray-600">
+                      <Icon name="check" className="w-5 h-5 text-forest flex-shrink-0" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
               </div>
-
               <div>
                 <DonationCard />
               </div>
@@ -120,14 +102,14 @@ export default function SupportUs() {
         </section>
       )}
 
-      {/* ── VOLUNTEER PANEL ───────────────────────────────────────────── */}
+      {/* ── VOLUNTEER ─────────────────────────────────────────────────── */}
       {activeTab === 'volunteer' && (
         <section className="py-24 lg:py-32 bg-cream" id="volunteer">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <SectionHeading
-              eyebrow="Give your time"
-              title="Volunteer With Us"
-              subtitle="We are a brand new organisation building from scratch. Right now, volunteer support is every bit as valuable as a financial donation."
+              eyebrow="Volunteer"
+              title="Give Your Time"
+              subtitle="We welcome volunteers with all kinds of skills and backgrounds. Get in touch and we will find the right fit."
               className="mb-16"
             />
             {/* CUSTOMISE: Update volunteer roles above */}
@@ -143,23 +125,21 @@ export default function SupportUs() {
               ))}
             </div>
 
-            {/* Volunteer enquiry form */}
             <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-premium p-8 md:p-10">
-              <h3 className="font-serif text-2xl font-bold text-forest-dark mb-2">Register Your Interest</h3>
-              <p className="text-sm text-gray-400 mb-6">We will get back to you within a few working days.</p>
+              <h3 className="font-serif text-2xl font-bold text-forest-dark mb-6">Register Your Interest</h3>
               <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input type="text"  placeholder="Your name"     required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none text-sm" />
                   <input type="email" placeholder="Email address" required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none text-sm" />
                 </div>
                 <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none text-sm bg-white text-gray-600">
-                  <option value="">Select a volunteering area</option>
+                  <option value="">Select an area</option>
                   {volunteerRoles.map((r) => <option key={r.title}>{r.title}</option>)}
                 </select>
                 <textarea rows={3} placeholder="Tell us about yourself and your availability" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none text-sm resize-none" />
-                {/* NOTE: Connect this form to your backend or form service */}
+                {/* NOTE: Connect to your backend or form service */}
                 <button type="submit" className="w-full bg-forest text-white py-4 rounded-xl font-semibold hover:bg-forest-light transition-colors">
-                  Submit Enquiry
+                  Submit
                 </button>
               </form>
             </div>
@@ -167,118 +147,67 @@ export default function SupportUs() {
         </section>
       )}
 
-      {/* ── PARTNER PANEL ─────────────────────────────────────────────── */}
+      {/* ── PARTNER ───────────────────────────────────────────────────── */}
       {activeTab === 'partner' && (
         <section className="py-24 lg:py-32 bg-cream" id="partner">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <SectionHeading
-              eyebrow="Work with us"
-              title="Partner With a New Organisation"
-              subtitle="We are at the very beginning. If you are an organisation that shares our values, we are actively seeking our first partnerships."
+              eyebrow="Partner"
+              title="Work With Us"
+              subtitle="We are open to partnerships with organisations that share our values. Whether you are a community group, a funder, or a business — let us talk."
               className="mb-12"
             />
-
-            <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
+            <div className="grid md:grid-cols-2 gap-6 text-left mb-12">
               {[
-                {
-                  title: 'Community Partners',
-                  body:  'Do you work with similar communities? We are looking for local organisations to collaborate with — sharing knowledge, referrals, and reach.',
-                },
-                {
-                  title: 'Corporate Supporters',
-                  body:  'Does your company want to align with a brand new cause from the ground floor? We offer genuine co-creation, not just a logo placement.',
-                },
-                {
-                  title: 'Institutional Funders',
-                  body:  'Are you a grant-making organisation open to supporting early-stage NGOs? We would welcome a conversation about our plans and vision.',
-                },
-                {
-                  title: 'Pro-Bono Professionals',
-                  body:  'Could your organisation offer legal, financial, communications, or strategic support in kind? We would be grateful for any professional help.',
-                },
+                { title: 'Community Organisations', body: 'Do you work with similar communities? We are interested in collaboration, referrals, and shared learning.' },
+                { title: 'Corporate Partners',       body: 'Align your organisation with a cause rooted in purpose. We are open to in-kind support, giving, and team engagement.' },
+                { title: 'Funders & Grant-Makers',   body: 'We welcome conversations with those who support early-stage organisations with a clear mission.' },
+                { title: 'Pro-Bono Support',          body: 'Could your organisation offer skills in kind? Legal, financial, or communications support would be gratefully received.' },
               ].map(({ title, body }) => (
                 <div key={title} className="bg-white rounded-2xl p-7 shadow-premium">
                   <div className="w-2 h-8 bg-gold rounded-full mb-4" />
-                  <h3 className="font-serif text-xl font-bold text-forest-dark mb-3">{title}</h3>
+                  <h3 className="font-serif text-xl font-bold text-forest-dark mb-2">{title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
                 </div>
               ))}
             </div>
-
             <CTAButton to="/contact" variant="primary" size="lg">Start a Conversation</CTAButton>
           </div>
         </section>
       )}
 
-      {/* ── FUNDRAISE PANEL ───────────────────────────────────────────── */}
+      {/* ── FUNDRAISE ─────────────────────────────────────────────────── */}
       {activeTab === 'fundraise' && (
         <section className="py-24 lg:py-32 bg-cream" id="fundraise">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <SectionHeading
-                  align="left"
-                  eyebrow="Raise funds for us"
-                  title="Help Us Raise Our First Funds"
-                  subtitle="A fundraising page, a sponsored event, or even a social media post — every act of advocacy helps a brand new organisation get off the ground."
-                />
-                <div className="mt-8 space-y-5">
-                  {[
-                    {
-                      title: 'Online Fundraising',
-                      body:  'Set up a page and share with your network. Ask people to back a new organisation with something to prove.',
-                    },
-                    {
-                      title: 'Sponsored Challenges',
-                      body:  'A run, a cycle, a swim, a bake-off — choose something that suits you and raise funds in our name.',
-                    },
-                    {
-                      title: 'Community Events',
-                      body:  'Quiz nights, coffee mornings, raffles — small events can make a big difference for a brand new charity.',
-                    },
-                    {
-                      title: 'Spread the Word',
-                      body:  'Share our website on social media. Tell people why you believe in what we are trying to do. That is fundraising too.',
-                    },
-                  ].map(({ title, body }) => (
-                    <div key={title} className="flex gap-4">
-                      <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0 mt-2" />
-                      <div>
-                        <h4 className="font-semibold text-forest-dark text-sm mb-1">{title}</h4>
-                        <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
-                      </div>
-                    </div>
-                  ))}
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Fundraise"
+              title="Raise Funds for Us"
+              subtitle="Any fundraising effort — however small — helps us do more. We are grateful for every act of support."
+              className="mb-12"
+            />
+            <div className="grid sm:grid-cols-2 gap-6 mb-10">
+              {[
+                { title: 'Online Fundraising',   body: 'Set up a page and share with your network.' },
+                { title: 'Sponsored Challenges', body: 'A run, a cycle, a swim — raise funds in our name.' },
+                { title: 'Community Events',     body: 'Quiz nights, coffee mornings, raffles — every penny counts.' },
+                { title: 'Share Our Work',       body: 'Spread the word on social media. That is fundraising too.' },
+              ].map(({ title, body }) => (
+                <div key={title} className="bg-white rounded-2xl p-6 shadow-premium flex gap-4">
+                  <div className="w-2 h-2 rounded-full bg-gold flex-shrink-0 mt-2" />
+                  <div>
+                    <h4 className="font-semibold text-forest-dark text-sm mb-1">{title}</h4>
+                    <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
+                  </div>
                 </div>
-                <div className="mt-8">
-                  <CTAButton to="/contact" variant="primary" size="lg">Tell Us About Your Fundraiser</CTAButton>
-                </div>
-              </div>
-              {/* Image placeholder */}
-              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-forest to-forest-light h-96 flex items-center justify-center">
-                {/* CUSTOMISE: Replace with a real image */}
-                <p className="text-white/30 text-sm px-8 text-center">[ Replace with a fundraising or team photo ]</p>
-              </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <CTAButton to="/contact" variant="primary" size="lg">Tell Us About Your Fundraiser</CTAButton>
             </div>
           </div>
         </section>
       )}
-
-      {/* ── HONEST TRANSPARENCY STRIP ─────────────────────────────────── */}
-      <div className="bg-forest-50 border-y border-forest/10 py-10">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-forest rounded-xl flex items-center justify-center flex-shrink-0">
-              <Icon name="shield" className="w-6 h-6 text-gold" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-forest-dark">Our registration is in progress</h4>
-              <p className="text-sm text-gray-500">We will publish our charity number as soon as registration is confirmed. Thank you for trusting us.</p>
-            </div>
-          </div>
-          <CTAButton to="/contact" variant="outline" size="sm">Ask Us Anything</CTAButton>
-        </div>
-      </div>
     </>
   )
 }

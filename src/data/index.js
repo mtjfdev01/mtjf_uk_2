@@ -20,28 +20,27 @@ export const orgInfo = {
   },
 }
 
-// We just launched — these reflect our founding commitments, not past achievements.
-// CUSTOMISE: Update these when real data is available.
+// CUSTOMISE: Update these with real numbers as your work grows
 export const impactStats = [
   {
     number:      '2025',
-    label:       'Year Founded',
-    description: 'We officially launched this year with a clear mission and a commitment to act.',
+    label:       'Established',
+    description: 'A newly founded UK organisation.',
   },
   {
     number:      '4',
-    label:       'Core Pillars',
-    description: 'Education, health, shelter, and community — the foundations of our work.',
+    label:       'Programme Areas',
+    description: 'Education, health, shelter, and community development.',
   },
   {
     number:      '100%',
     label:       'Transparent',
-    description: 'From day one, every penny donated will be tracked and reported openly.',
+    description: 'Every penny tracked and reported openly.',
   },
   {
-    number:      'You',
-    label:       'Could Be First',
-    description: 'We have just begun. Be among our founding supporters and help us take our first steps.',
+    number:      'UK',
+    label:       'Based',
+    description: 'Working within and beyond the United Kingdom.',
   },
 ]
 

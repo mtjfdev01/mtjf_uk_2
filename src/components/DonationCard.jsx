@@ -2,16 +2,11 @@ import { useState } from 'react'
 import { donationAmounts, donationImpact } from '../data'
 import Icon from './Icons'
 
-// compact prop: true = smaller padding (for hero overlay use)
 export default function DonationCard({ compact = false }) {
-  const [frequency,    setFrequency]    = useState('monthly')   // 'monthly' | 'one-time'
+  const [frequency,    setFrequency]    = useState('monthly')
   const [selected,     setSelected]     = useState(25)
   const [customAmount, setCustomAmount] = useState('')
   const [showCustom,   setShowCustom]   = useState(false)
-
-  const displayAmount = showCustom
-    ? (parseFloat(customAmount) || 0)
-    : selected
 
   const impactText = donationImpact[selected] ?? donationImpact[25]
 
@@ -26,15 +21,17 @@ export default function DonationCard({ compact = false }) {
     setSelected(null)
   }
 
+  const displayAmount = showCustom ? (parseFloat(customAmount) || 0) : selected
   const pad = compact ? 'p-7' : 'p-8 md:p-10'
 
   return (
     <div className={`bg-white rounded-3xl shadow-premium-lg ${pad} w-full`}>
+
       {/* Header */}
       <h3 className="font-serif text-2xl font-bold text-forest-dark mb-1">
-        Be a Founding Supporter
+        Support Our Work
       </h3>
-      <p className="text-sm text-gray-400 mb-6">We just launched. Help us take our very first steps.</p>
+      <p className="text-sm text-gray-400 mb-6">Every contribution makes a difference.</p>
 
       {/* Frequency toggle */}
       <div className="flex rounded-xl bg-cream p-1 mb-6">
@@ -97,26 +94,26 @@ export default function DonationCard({ compact = false }) {
         )}
       </button>
 
-      {/* Impact description */}
+      {/* Impact line */}
       {!showCustom && selected && (
         <div className="flex items-start gap-3 bg-forest-50 rounded-xl px-4 py-3.5 mb-6">
           <Icon name="check" className="w-4 h-4 text-forest mt-0.5 flex-shrink-0" />
           <p className="text-xs text-forest-dark leading-relaxed">
-            <span className="font-semibold">£{selected}</span> {frequency === 'monthly' ? 'per month' : ''} {impactText}
+            <span className="font-semibold">£{selected}</span>{frequency === 'monthly' ? ' per month' : ''} {impactText}
           </p>
         </div>
       )}
 
-      {/* CTA button */}
+      {/* CTA */}
       <button className="w-full bg-forest hover:bg-forest-light text-white font-semibold py-4 rounded-xl transition-all duration-200 shadow-green hover:shadow-lg text-base mb-4">
         {/* NOTE: Connect to your payment gateway here */}
-        Donate {displayAmount > 0 ? `£${displayAmount}` : ''} {frequency === 'monthly' ? 'Monthly' : 'Now'}
+        Donate {displayAmount > 0 ? `£${displayAmount}` : ''}{frequency === 'monthly' ? ' Monthly' : ''}
       </button>
 
-      {/* Trust badge */}
+      {/* Trust line */}
       <div className="flex items-center justify-center gap-2 text-gray-400">
         <Icon name="lock" className="w-3.5 h-3.5" />
-        <span className="text-xs">Secure donation · MTJF · Registration in Progress</span>
+        <span className="text-xs">Secure · Mercy to Justice Foundation · UK</span>
       </div>
     </div>
   )
