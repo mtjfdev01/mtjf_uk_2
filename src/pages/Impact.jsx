@@ -1,7 +1,7 @@
 import SectionHeading from '../components/SectionHeading'
 import CTAButton      from '../components/CTAButton'
 import Icon           from '../components/Icons'
-import { helpCards, fundBreakdown } from '../data'
+import { helpCards } from '../data'
 
 function PageHero({ eyebrow, title, subtitle }) {
   return (
@@ -104,6 +104,7 @@ export default function Impact() {
       </section>
 
       {/* ── TRANSPARENCY ──────────────────────────────────────────────── */}
+      {/* Financial Transparency section - commented out, uncomment when ready
       <section className="py-24 lg:py-32 bg-cream">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -115,7 +116,6 @@ export default function Impact() {
                 subtitle="Our planned allocation, a commitment we make publicly and will report against honestly."
               />
               <div className="mt-10 space-y-5">
-                {/* CUSTOMISE: Update fund breakdown in src/data/index.js */}
                 {fundBreakdown.map((item) => (
                   <div key={item.label}>
                     <div className="flex items-center justify-between mb-2">
@@ -133,10 +133,10 @@ export default function Impact() {
 
             <div className="space-y-4 pt-4 lg:pt-14">
               {[
-                { icon: 'shield',   title: 'Charity Commission',  body: 'We are pursuing registration and will publish our number here as soon as it is confirmed.' },
-                { icon: 'chartBar', title: 'Annual Reporting',    body: 'We will produce accounts and publish them publicly once we have a full financial year to report.' },
+                { icon: 'shield',   title: 'Charity Commission',    body: 'We are pursuing registration and will publish our number here as soon as it is confirmed.' },
+                { icon: 'chartBar', title: 'Annual Reporting',      body: 'We will produce accounts and publish them publicly once we have a full financial year to report.' },
                 { icon: 'check',    title: 'Fundraising Standards', body: 'We are committed to the Code of Fundraising Practice from the outset.' },
-                { icon: 'lock',     title: 'Gift Aid',            body: 'We will apply for Gift Aid approval as soon as charity registration is confirmed.' },
+                { icon: 'lock',     title: 'Gift Aid',              body: 'We will apply for Gift Aid approval as soon as charity registration is confirmed.' },
               ].map(({ icon, title, body }) => (
                 <div key={title} className="flex gap-5 bg-white rounded-2xl p-6 shadow-premium">
                   <div className="w-10 h-10 rounded-xl bg-forest-50 text-forest flex items-center justify-center flex-shrink-0">
@@ -152,6 +152,7 @@ export default function Impact() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ── CTA ───────────────────────────────────────────────────────── */}
       <section className="py-20 bg-white text-center">

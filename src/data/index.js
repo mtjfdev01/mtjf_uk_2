@@ -9,7 +9,7 @@ export const orgInfo = {
   tagline:       'Leading with Mercy. Standing for Justice.',
   // CUSTOMISE: Update once your charity registration is approved
   charityNumber: 'Registration in Progress',
-  email:         'hello@mtjfoundation.org',
+  email:         'info@mtjfoundation.org.uk',
   phone:         '+44 (0)20 0000 0000',           // CUSTOMISE: Replace with real number
   address:       '4th Floor, Silverstream House, 45 Fitzroy Street, Fitzrovia, London, United Kingdom, W1T 6EB',
   social: {
