@@ -82,7 +82,7 @@ export default function Stories() {
           </section>
         </>
       ) : (
-        /* ── Empty state — no stories yet ── */
+        /* Empty state - no stories yet */
         <section className="py-32 bg-cream">
           <div className="max-w-xl mx-auto px-6 text-center">
             <p className="text-gray-400 text-lg mb-6">Stories coming soon.</p>

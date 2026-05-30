@@ -66,7 +66,7 @@ export default function Footer() {
 
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               {/* CUSTOMISE: Replace with your tagline or mission statement */}
-              A newly launched UK NGO. We are leading with mercy and standing for justice — starting today.
+              A newly launched UK NGO. We are leading with mercy and standing for justice - starting today.
             </p>
 
             {/* Social links */}
@@ -106,7 +106,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
               <p className="text-white font-semibold mb-1">Stay connected</p>
-              <p className="text-white/50 text-sm">Follow our journey from day one — receive updates as our work begins.</p>
+              <p className="text-white/50 text-sm">Follow our journey from day one - receive updates as our work begins.</p>
             </div>
             {/* CUSTOMISE: Connect to your email provider (Mailchimp, etc.) */}
             <form onSubmit={(e) => e.preventDefault()} className="flex gap-2 w-full md:w-auto">

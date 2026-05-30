@@ -31,7 +31,7 @@ export default function Home() {
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed mb-10">
             {/* CUSTOMISE: Replace with your own description */}
-            Mercy to Justice Foundation is a UK-based organisation working alongside vulnerable individuals and communities. We believe that compassion and justice are not opposing forces — they are two sides of the same calling.
+            Mercy to Justice Foundation is a UK-based organisation working alongside vulnerable individuals and communities. We believe that compassion and justice are not opposing forces. They are two sides of the same calling.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <CTAButton to="/about"      variant="outline" size="lg">Who We Are</CTAButton>
@@ -61,7 +61,7 @@ export default function Home() {
         <SectionHeading
           eyebrow="Get involved"
           title="Ways to Support Us"
-          subtitle="Whether you give your time, your resources, or your voice — every act of support moves us forward."
+          subtitle="Whether you give your time, your resources, or your voice, every act of support moves us forward."
           className="mb-16"
         />
         {/* CUSTOMISE: Update support options in src/data/index.js */}
@@ -112,7 +112,7 @@ export default function Home() {
             </h2>
             {/* CUSTOMISE: Replace with your transparency statement */}
             <p className="text-gray-500 leading-relaxed mb-8">
-              We believe donors deserve to know exactly how their support is used. Every pound is tracked and every decision is reported openly — because trust is the foundation of everything we do.
+              We believe donors deserve to know exactly how their support is used. Every pound is tracked and every decision is reported openly, because trust is the foundation of everything we do.
             </p>
             <ul className="space-y-4">
               {[
@@ -172,7 +172,7 @@ export default function Home() {
             <span className="italic text-gold/90">Real Difference?</span>
           </h2>
           <p className="text-white/65 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-            Stand with us. Your support — however large or small — helps us do the work that needs doing.
+            Stand with us. Your support, however large or small, helps us do the work that needs doing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <CTAButton to="/support-us" variant="gold"      size="xl">Support Our Work</CTAButton>

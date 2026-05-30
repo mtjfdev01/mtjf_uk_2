@@ -1,5 +1,5 @@
 // =================================================================
-// SITE DATA — Customise all content in this file for your NGO
+// SITE DATA - Customise all content in this file for your NGO
 // =================================================================
 
 // CUSTOMISE: Your organisation's core details
@@ -44,7 +44,7 @@ export const impactStats = [
   },
 ]
 
-// CUSTOMISE: Our four programme areas — what we intend to do
+// CUSTOMISE: Our four programme areas - what we intend to do
 export const helpCards = [
   {
     id:          1,
@@ -65,7 +65,7 @@ export const helpCards = [
     icon:        'shelter',
     title:       'Shelter & Safety',
     description:
-      'We are committed to working towards safe, stable environments for those facing hardship or crisis — because everyone deserves a place of safety.',
+      'We are committed to working towards safe, stable environments for those facing hardship or crisis, because everyone deserves a place of safety.',
   },
   {
     id:          4,
@@ -76,7 +76,7 @@ export const helpCards = [
   },
 ]
 
-// No stories yet — we just launched.
+// No stories yet - we just launched.
 // CUSTOMISE: Add real stories as your work begins.
 export const stories = []
 
@@ -86,7 +86,7 @@ export const supportOptions = [
     id:          1,
     icon:        'donate',
     title:       'Donate',
-    description: 'We have just launched and every founding gift — however large or small — will go directly towards getting our first programmes off the ground.',
+    description: 'Every gift, however large or small, will go directly towards getting our first programmes off the ground.',
     cta:         'Be a Founding Donor',
     href:        '/support-us',
     highlight:   true,
@@ -95,7 +95,7 @@ export const supportOptions = [
     id:          2,
     icon:        'volunteer',
     title:       'Volunteer',
-    description: 'We are building our volunteer community from scratch. If you have time, passion, and a desire to help — we want to hear from you.',
+    description: 'We are building our volunteer community from scratch. If you have time, passion, and a desire to help, we want to hear from you.',
     cta:         'Join Our Team',
     href:        '/support-us#volunteer',
     highlight:   false,
@@ -113,7 +113,7 @@ export const supportOptions = [
     id:          4,
     icon:        'fundraise',
     title:       'Fundraise',
-    description: 'Help us spread the word and raise our first funds. A sponsored event, a social share, or a community fundraiser — every effort counts.',
+    description: 'Help us spread the word and raise our first funds. A sponsored event, a social share, or a community fundraiser. Every effort counts.',
     cta:         'Start Fundraising',
     href:        '/support-us#fundraise',
     highlight:   false,
@@ -131,15 +131,15 @@ export const donationImpact = {
   50: 'could help us take a meaningful step towards launching our first programme.',
 }
 
-// Our commitment to transparency — planned fund allocation
+// Our commitment to transparency - planned fund allocation
 // CUSTOMISE: Update as your actual figures become available
 export const fundBreakdown = [
-  { label: 'Direct Programmes',  percentage: 80, color: 'bg-forest',       description: 'Will go directly to our work on the ground' },
-  { label: 'Operations',         percentage: 12, color: 'bg-forest-light',  description: 'Keeps the organisation running effectively' },
-  { label: 'Fundraising',        percentage: 8,  color: 'bg-gold',          description: 'Ensures we can continue to raise vital funds' },
+  { label: 'Direct Programmes', percentage: 90, color: 'bg-forest',      description: 'Goes directly to our work on the ground' },
+  { label: 'Operations',        percentage: 8,  color: 'bg-forest-light', description: 'Keeps the organisation running effectively' },
+  { label: 'Fundraising',       percentage: 2,  color: 'bg-gold',         description: 'Ensures we can continue to raise vital funds' },
 ]
 
-// CUSTOMISE: Founding team — replace with real names, roles, and photos
+// CUSTOMISE: Founding team - replace with real names, roles, and photos
 export const teamMembers = [
   {
     id:    1,
@@ -158,7 +158,7 @@ export const teamMembers = [
   },
 ]
 
-// We just launched — only one milestone so far.
+// We just launched - only one milestone so far.
 // CUSTOMISE: Add milestones as your journey unfolds.
 export const milestones = [
   {
@@ -184,7 +184,7 @@ export const faqs = [
   },
   {
     q: 'Can I volunteer with a brand new organisation?',
-    a: 'Absolutely — and we especially welcome it. Founding volunteers help shape who we become. Get in touch and let us know your skills and availability.',
+    a: 'Absolutely, and we especially welcome it. Founding volunteers help shape who we become. Get in touch and let us know your skills and availability.',
   },
   {
     q: 'How can I stay updated on your progress?',
@@ -192,5 +192,5 @@ export const faqs = [
   },
 ]
 
-// CUSTOMISE: Story categories — will be used once stories are added
+// CUSTOMISE: Story categories - will be used once stories are added
 export const storyCategories = ['All', 'Education', 'Health', 'Community', 'Shelter']

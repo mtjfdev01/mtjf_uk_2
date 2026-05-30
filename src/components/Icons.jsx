@@ -1,4 +1,4 @@
-// SVG icon library — all icons from Heroicons (MIT licence, free to use)
+// SVG icon library - all icons from Heroicons (MIT licence, free to use)
 // Add or replace icons here as needed for your brand
 
 const icons = {

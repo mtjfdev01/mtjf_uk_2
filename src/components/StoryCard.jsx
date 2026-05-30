@@ -12,7 +12,7 @@ export default function StoryCard({ story, featured = false }) {
   const { category, title, excerpt, readTime, image } = story
   const badgeCls = categoryColour[category] ?? 'bg-gray-100 text-gray-600'
 
-  // Featured layout — wide card with image on the left
+  // Featured layout - wide card with image on the left
   if (featured) {
     return (
       <div className="group grid md:grid-cols-2 bg-white rounded-3xl shadow-premium hover:shadow-premium-lg transition-all duration-300 overflow-hidden border border-gray-100">
@@ -59,7 +59,7 @@ export default function StoryCard({ story, featured = false }) {
     )
   }
 
-  // Standard card layout — vertical
+  // Standard card layout - vertical
   return (
     <div className="group bg-white rounded-2xl shadow-premium hover:shadow-premium-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden border border-gray-100">
       {/* Image */}

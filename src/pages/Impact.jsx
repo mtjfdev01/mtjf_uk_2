@@ -30,7 +30,7 @@ export default function Impact() {
       <PageHero
         eyebrow="Our vision"
         title="What We're Working Towards"
-        subtitle="Our four programme areas — and the change we aim to create within each of them."
+        subtitle="Our four programme areas and the change we aim to create within each of them."
       />
 
       {/* ── PROGRAMME AREAS ───────────────────────────────────────────── */}
@@ -39,7 +39,7 @@ export default function Impact() {
           <SectionHeading
             eyebrow="Programme areas"
             title="Four Pillars of Our Work"
-            subtitle="These are the areas where we intend to focus — chosen because of the depth of need and the opportunity for meaningful change."
+            subtitle="These are the areas where we intend to focus, chosen because of the depth of need and the opportunity for meaningful change."
             className="mb-16"
           />
           {/* CUSTOMISE: Update programme areas in src/data/index.js */}
@@ -66,7 +66,7 @@ export default function Impact() {
           <SectionHeading
             eyebrow="How we work"
             title="Our Approach"
-            subtitle="How we intend to do this work — not just what we intend to do."
+            subtitle="How we intend to do this work, not just what we intend to do."
             dark
             className="mb-16"
           />
@@ -112,7 +112,7 @@ export default function Impact() {
                 align="left"
                 eyebrow="Financial transparency"
                 title="How We Use Donations"
-                subtitle="Our planned allocation — a commitment we make publicly and will report against honestly."
+                subtitle="Our planned allocation, a commitment we make publicly and will report against honestly."
               />
               <div className="mt-10 space-y-5">
                 {/* CUSTOMISE: Update fund breakdown in src/data/index.js */}

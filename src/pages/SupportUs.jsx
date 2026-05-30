@@ -78,7 +78,7 @@ export default function SupportUs() {
                 </h2>
                 {/* CUSTOMISE: Replace donation copy */}
                 <p className="text-gray-500 leading-relaxed mb-8">
-                  Your donation goes directly towards enabling our work — covering the essential costs that allow us to operate, listen, and act with purpose.
+                  Your donation goes directly towards enabling our work, covering the essential costs that allow us to operate, listen, and act with purpose.
                 </p>
                 <ul className="space-y-4 mb-8">
                   {[
@@ -154,7 +154,7 @@ export default function SupportUs() {
             <SectionHeading
               eyebrow="Partner"
               title="Work With Us"
-              subtitle="We are open to partnerships with organisations that share our values. Whether you are a community group, a funder, or a business — let us talk."
+              subtitle="We are open to partnerships with organisations that share our values. Whether you are a community group, a funder, or a business, get in touch."
               className="mb-12"
             />
             <div className="grid md:grid-cols-2 gap-6 text-left mb-12">
@@ -183,14 +183,14 @@ export default function SupportUs() {
             <SectionHeading
               eyebrow="Fundraise"
               title="Raise Funds for Us"
-              subtitle="Any fundraising effort — however small — helps us do more. We are grateful for every act of support."
+              subtitle="Any fundraising effort, however small, helps us do more. We are grateful for every act of support."
               className="mb-12"
             />
             <div className="grid sm:grid-cols-2 gap-6 mb-10">
               {[
                 { title: 'Online Fundraising',   body: 'Set up a page and share with your network.' },
-                { title: 'Sponsored Challenges', body: 'A run, a cycle, a swim — raise funds in our name.' },
-                { title: 'Community Events',     body: 'Quiz nights, coffee mornings, raffles — every penny counts.' },
+                { title: 'Sponsored Challenges', body: 'A run, a cycle, a swim. Raise funds in our name.' },
+                { title: 'Community Events',     body: 'Quiz nights, coffee mornings, raffles. Every penny counts.' },
                 { title: 'Share Our Work',       body: 'Spread the word on social media. That is fundraising too.' },
               ].map(({ title, body }) => (
                 <div key={title} className="bg-white rounded-2xl p-6 shadow-premium flex gap-4">

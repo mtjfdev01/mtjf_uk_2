@@ -48,7 +48,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Get in touch"
         title="We'd Love to Hear From You"
-        subtitle="Whether you have a question, want to get involved, or simply want to learn more — our team is here to help."
+        subtitle="Whether you have a question, want to get involved, or simply want to learn more, our team is here to help."
       />
 
       {/* ── CONTACT GRID ──────────────────────────────────────────────── */}

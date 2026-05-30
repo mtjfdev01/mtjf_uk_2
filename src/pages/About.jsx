@@ -38,10 +38,10 @@ export default function About() {
               {/* CUSTOMISE: Replace with your actual founding story */}
               <div className="space-y-4 text-gray-500 leading-relaxed">
                 <p>
-                  Mercy to Justice Foundation was built on a simple belief: that mercy and justice are not abstract ideals — they are practical callings that require real, grounded action.
+                  Mercy to Justice Foundation was built on a simple belief: that mercy and justice are not abstract ideals. They are practical callings that require real, grounded action.
                 </p>
                 <p>
-                  We exist to walk alongside people who have fallen through the gaps — providing compassionate support today while working towards fairer systems for tomorrow.
+                  We exist to walk alongside people who have fallen through the gaps, providing compassionate support today while working towards fairer systems for tomorrow.
                 </p>
                 <p>
                   Our work is shaped by listening first, acting second, and always keeping the needs of those we serve at the centre of every decision we make.
