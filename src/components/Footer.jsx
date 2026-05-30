@@ -66,7 +66,7 @@ export default function Footer() {
 
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               {/* CUSTOMISE: Replace with your tagline or mission statement */}
-              A newly launched UK NGO. We are leading with mercy and standing for justice - starting today.
+              Leading with mercy. Standing for justice.
             </p>
 
             {/* Social links */}
@@ -130,7 +130,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
           {/* CUSTOMISE: Update once charity registration is confirmed */}
-          <p>© {new Date().getFullYear()} {orgInfo.name}. UK Based · {orgInfo.charityNumber}.</p>
+          <p>© {new Date().getFullYear()} {orgInfo.name}. UK Based.</p>
           <p>Est. 2025 · Built with purpose</p>
         </div>
       </div>
