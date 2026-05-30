@@ -4,7 +4,7 @@ import SectionHeading from '../components/SectionHeading'
 import ImpactCard     from '../components/ImpactCard'
 import CTAButton      from '../components/CTAButton'
 import Icon           from '../components/Icons'
-import { helpCards, supportOptions, fundBreakdown } from '../data'
+import { helpCards, supportOptions } from '../data'
 
 function Section({ children, className = '' }) {
   return (
@@ -103,6 +103,7 @@ export default function Home() {
       </Section>
 
       {/* ── TRANSPARENCY ──────────────────────────────────────────────── */}
+      {/* Commented out - uncomment when ready to display
       <Section className="bg-cream">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -110,7 +111,6 @@ export default function Home() {
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-forest-dark mb-6 leading-tight">
               Transparency in Everything We Do
             </h2>
-            {/* CUSTOMISE: Replace with your transparency statement */}
             <p className="text-gray-500 leading-relaxed mb-8">
               We believe donors deserve to know exactly how their support is used. Every pound is tracked and every decision is reported openly, because trust is the foundation of everything we do.
             </p>
@@ -132,12 +132,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Fund breakdown */}
           <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-premium">
             <h3 className="font-serif text-xl font-semibold text-forest-dark mb-2">How We Use Donations</h3>
             <p className="text-xs text-gray-400 mb-8">Our planned allocation for every pound received.</p>
             <div className="space-y-5">
-              {/* CUSTOMISE: Update in src/data/index.js */}
               {fundBreakdown.map((item) => (
                 <div key={item.label}>
                   <div className="flex items-center justify-between mb-2">
@@ -160,6 +158,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
+      */}
 
       {/* ── FINAL CTA ─────────────────────────────────────────────────── */}
       <section className="bg-forest py-24 lg:py-32 relative overflow-hidden">

@@ -5,7 +5,7 @@
 // CUSTOMISE: Your organisation's core details
 export const orgInfo = {
   name:          'Mercy to Justice Foundation',
-  shortName:     'MTJF',
+  shortName:     'MTJ',
   tagline:       'Leading with Mercy. Standing for Justice.',
   // CUSTOMISE: Update once your charity registration is approved
   charityNumber: 'Registration in Progress',
@@ -145,7 +145,7 @@ export const teamMembers = [
     id:    1,
     name:  'Founder / Director',
     role:  'Chief Executive',
-    bio:   'A passionate advocate for justice and mercy, our founder established MTJF to turn conviction into action.',
+    bio:   'A passionate advocate for justice and mercy, our founder established MTJ to turn conviction into action.',
     // CUSTOMISE: Replace with a real headshot
     image: null,
   },
