@@ -33,13 +33,26 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link
+              <button
+  onClick={() => {
+    document
+      .getElementById("mission-vision-values")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  }}
+  className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/60 text-white hover:bg-white/10 hover:border-white transition-all duration-200 text-sm"
+>
+  About Us
+</button>
+              {/* <Link
                 to="/about"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/60 text-white hover:bg-white/10 hover:border-white transition-all duration-200 text-sm"
               >
                 About Us
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 to="/support-us"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold bg-gold text-forest-dark hover:bg-gold-light transition-all duration-200 shadow-lg text-sm"
               >
@@ -47,14 +60,14 @@ export default function Hero() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           {/* Right: Donation card */}
-          <div className="lg:col-span-2">
+          {/* <div className="lg:col-span-2">
             <DonationCard compact />
-          </div>
+          </div> */}
         </div>
       </div>
 

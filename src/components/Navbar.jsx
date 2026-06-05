@@ -5,11 +5,11 @@ import Icon from './Icons'
 
 // CUSTOMISE: Add or remove navigation links here
 const navLinks = [
-  { label: 'Home',       to: '/'           },
-  { label: 'About Us',   to: '/about'      },
-  { label: 'Our Vision', to: '/impact'     },
-  { label: 'Stories',    to: '/stories'    },
-  { label: 'Contact',    to: '/contact'    },
+  // { label: 'Home',       to: '/'           },
+  // { label: 'About Us',   to: '/about'      },
+  // { label: 'Our Vision', to: '/impact'     },
+  // { label: 'Stories',    to: '/stories'    },
+  // { label: 'Contact',    to: '/contact'    },
 ]
 
 export default function Navbar() {
@@ -79,14 +79,14 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+            {/* <div className="hidden lg:flex items-center gap-3">
               <Link
                 to="/support-us"
                 className="px-6 py-2.5 rounded-full text-sm font-semibold bg-gold text-forest-dark hover:bg-gold-light transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 Support Us
               </Link>
-            </div>
+            </div> */}
 
             {/* Mobile hamburger */}
             <button

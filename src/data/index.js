@@ -88,7 +88,7 @@ export const supportOptions = [
     title:       'Donate',
     description: 'Every gift, however large or small, will go directly towards getting our first programmes off the ground.',
     cta:         'Be a Founding Donor',
-    href:        '/support-us',
+    href:        '',
     highlight:   true,
   },
   {
@@ -97,7 +97,7 @@ export const supportOptions = [
     title:       'Volunteer',
     description: 'We are building our volunteer community from scratch. If you have time, passion, and a desire to help, we want to hear from you.',
     cta:         'Join Our Team',
-    href:        '/support-us#volunteer',
+    href:        '',
     highlight:   false,
   },
   {
@@ -106,7 +106,7 @@ export const supportOptions = [
     title:       'Partner With Us',
     description: 'As a new organisation, we are actively seeking partnerships with organisations who share our values. Let us build something together.',
     cta:         'Explore Partnerships',
-    href:        '/support-us#partner',
+    href:        '',
     highlight:   false,
   },
   {
@@ -115,7 +115,7 @@ export const supportOptions = [
     title:       'Fundraise',
     description: 'Help us spread the word and raise our first funds. A sponsored event, a social share, or a community fundraiser. Every effort counts.',
     cta:         'Start Fundraising',
-    href:        '/support-us#fundraise',
+    href:        '',
     highlight:   false,
   },
 ]

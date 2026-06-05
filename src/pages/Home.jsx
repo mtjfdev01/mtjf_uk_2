@@ -3,8 +3,9 @@ import Hero          from '../components/Hero'
 import SectionHeading from '../components/SectionHeading'
 import ImpactCard     from '../components/ImpactCard'
 import CTAButton      from '../components/CTAButton'
+import ContactForm    from '../components/ContactForm'
 import Icon           from '../components/Icons'
-import { helpCards, supportOptions } from '../data'
+import { helpCards, supportOptions, orgInfo } from '../data'
 
 function Section({ children, className = '' }) {
   return (
@@ -19,6 +20,50 @@ export default function Home() {
     <>
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <Hero />
+      {/* ── MISSION / VISION / VALUES ───────────────────────────────────── */}
+       <section 
+       id="mission-vision-values"
+       className="py-24 lg:py-32 bg-cream">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <SectionHeading
+                  eyebrow="What drives us"
+                  title="Mission, Vision & Values"
+                  className="mb-16"
+                />
+                <div className="grid md:grid-cols-3 gap-8">
+                  {/* CUSTOMISE: Replace with your mission, vision, and values */}
+                  {[
+                    {
+                      label:     'Our Mission',
+                      heading:   'To act with mercy and advocate for justice.',
+                      body:      'We walk alongside vulnerable individuals and communities, providing compassionate support and working towards systemic change.',
+                      border:    'border-forest',
+                      text:      'text-forest',
+                    },
+                    {
+                      label:     'Our Vision',
+                      heading:   'A world where mercy and justice go hand in hand.',
+                      body:      'We believe the world is made better not just by kind acts, but by the structures that make cruelty unnecessary. We are working towards both.',
+                      border:    'border-gold',
+                      text:      'text-gold-dark',
+                    },
+                    {
+                      label:     'Our Values',
+                      heading:   'Honesty. Compassion. Accountability.',
+                      body:      'We lead with truth about who we are and where we are. We approach people with dignity. We hold ourselves accountable to those we serve.',
+                      border:    'border-forest-light',
+                      text:      'text-forest-light',
+                    },
+                  ].map(({ label, heading, body, border, text }) => (
+                    <div key={label} className={`bg-white rounded-2xl shadow-premium p-8 border-t-4 ${border}`}>
+                      <span className={`text-xs font-semibold uppercase tracking-widest ${text} mb-4 block`}>{label}</span>
+                      <h3 className="font-serif text-xl font-bold text-forest-dark mb-4 leading-snug">{heading}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
 
       {/* ── MISSION ───────────────────────────────────────────────────── */}
       <Section className="bg-white">
@@ -34,8 +79,22 @@ export default function Home() {
             Mercy to Justice Foundation is a UK-based organisation working alongside vulnerable individuals and communities. We believe that compassion and justice are not opposing forces. They are two sides of the same calling.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton to="/about"      variant="outline" size="lg">Who We Are</CTAButton>
-            <CTAButton to="/support-us" variant="primary" size="lg">Get Involved</CTAButton>
+            <CTAButton
+  variant="outline"
+  size="lg"
+  onClick={() => {
+    document
+      .getElementById("mission-vision-values")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  }}
+>
+  Who We Are
+</CTAButton>
+            {/* <CTAButton to="/#mission-vision-values"     variant="outline" size="lg">Who We Are</CTAButton> */}
+            {/* <CTAButton to="/support-us" variant="primary" size="lg">Get Involved</CTAButton> */}
           </div>
         </div>
       </Section>
@@ -57,7 +116,10 @@ export default function Home() {
       </Section>
 
       {/* ── HOW TO HELP ───────────────────────────────────────────────── */}
-      <Section className="bg-white">
+      {/* <Section className="bg-white"> */}
+      
+{/*       
+      <Section  className="bg-white">
         <SectionHeading
           eyebrow="Get involved"
           title="Ways to Support Us"
@@ -65,7 +127,7 @@ export default function Home() {
           className="mb-16"
         />
         {/* CUSTOMISE: Update support options in src/data/index.js */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {supportOptions.map((opt) => (
             <div
               key={opt.id}
@@ -99,9 +161,86 @@ export default function Home() {
               </Link>
             </div>
           ))}
-        </div>
-      </Section>
+        </div> */}
+      {/* </Section>  */}
+      
 
+
+
+
+        {/* ── CONTACT GRID ────────────────────────────────────────────────  */}
+         <section className="py-24 lg:py-32 bg-cream">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                  <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
+        
+                    {/* Left: info + map */}
+                    <div className="lg:col-span-2 space-y-8">
+                      <div>
+                        <h2 className="font-serif text-3xl font-bold text-forest-dark mb-4">Contact Details</h2>
+                        <p className="text-gray-500 text-sm leading-relaxed">
+                          We aim to respond to all enquiries within two working days. For urgent matters, please call us directly.
+                        </p>
+                      </div>
+        
+                      {/* Contact info cards */}
+                      {/* CUSTOMISE: Update contact details in src/data/index.js */}
+                      {[
+                        // { icon: 'email',    label: 'Email us',          value: orgInfo.email,   href: `mailto:${orgInfo.email}` },
+                        { icon: 'phone',    label: 'Call us',           value: orgInfo.phone,   href: `tel:${orgInfo.phone.replace(/\s/g,'')}` },
+                        { icon: 'location', label: 'Visit us',          value: orgInfo.address, href: '#' },
+                      ].map(({ icon, label, value, href }) => (
+                        <a
+                          key={label}
+                          href={href}
+                          className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-premium hover:shadow-premium-lg transition-all group"
+                        >
+                          <div className="w-10 h-10 rounded-xl bg-forest-50 text-forest flex items-center justify-center flex-shrink-0 group-hover:bg-forest group-hover:text-white transition-colors">
+                            <Icon name={icon} className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-0.5">{label}</p>
+                            <p className="text-sm font-semibold text-forest-dark">{value}</p>
+                          </div>
+                        </a>
+                      ))}
+        
+                      {/* Office hours */}
+                      {/* <div className="bg-white rounded-2xl p-6 shadow-premium">
+                        <h4 className="font-semibold text-forest-dark text-sm mb-3">Office Hours</h4>
+                        {/* CUSTOMISE: Replace with your real office hours */}
+                        {/* <div className="space-y-1.5 text-sm text-gray-500">
+                          <div className="flex justify-between"><span>Monday – Friday</span><span className="font-medium text-forest-dark">9:00 – 17:30</span></div>
+                          <div className="flex justify-between"><span>Saturday</span><span className="font-medium text-forest-dark">10:00 – 14:00</span></div>
+                          <div className="flex justify-between"><span>Sunday</span><span className="text-gray-400">Closed</span></div>
+                        </div> */}
+                      {/* </div> */} 
+        
+                      {/* Map placeholder */}
+                      <div className="rounded-2xl overflow-hidden h-52 bg-forest-50 border border-forest/10 flex items-center justify-center">
+                        {/*
+                          CUSTOMISE: Replace this placeholder with an embedded map.
+                          Example (Google Maps embed):
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=..."
+                            className="w-full h-full"
+                            loading="lazy"
+                            title="Office location"
+                          />
+                        */}
+                        <div className="text-center">
+                          <Icon name="location" className="w-8 h-8 text-forest/30 mx-auto mb-2" />
+                          <p className="text-forest/40 text-xs">[ Replace with embedded map ]</p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    {/* Right: contact form */}
+                    <div className="lg:col-span-3">
+                      <ContactForm />
+                    </div>
+                  </div>
+                </div>
+              </section>
       {/* ── TRANSPARENCY ──────────────────────────────────────────────── */}
       {/* Commented out - uncomment when ready to display
       <Section className="bg-cream">
@@ -174,8 +313,8 @@ export default function Home() {
             Stand with us. Your support, however large or small, helps us do the work that needs doing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton to="/support-us" variant="gold"      size="xl">Support Our Work</CTAButton>
-            <CTAButton to="/contact"    variant="secondary" size="xl">Get in Touch</CTAButton>
+            {/* <CTAButton to="/support-us" variant="gold"      size="xl">Support Our Work</CTAButton> */}
+            <CTAButton   variant="secondary" size="xl">Get in Touch</CTAButton>
           </div>
         </div>
       </section>

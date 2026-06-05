@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           {/* Nav columns */}
-          {footerNav.map(({ heading, links }) => (
+          {/* {footerNav.map(({ heading, links }) => (
             <div key={heading}>
               <h4 className="text-xs uppercase tracking-widest text-gold font-semibold mb-5">{heading}</h4>
               <ul className="space-y-3">
@@ -98,7 +98,7 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          ))}
+          ))} */}
         </div>
 
         {/* Newsletter strip */}

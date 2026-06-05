@@ -36,13 +36,13 @@ export default function CTAButton({
   const cls = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] ?? sizes.md} ${className}`
 
   // Internal React Router link
-  if (to) {
-    return (
-      <Link to={to} className={cls}>
-        {children}
-      </Link>
-    )
-  }
+if (to) {
+  return (
+    <Link to={to} onClick={onClick} className={cls}>
+      {children}
+    </Link>
+  )
+}
 
   // External anchor tag
   if (href) {
