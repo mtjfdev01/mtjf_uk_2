@@ -89,7 +89,7 @@ export default function Navbar() {
             </div> */}
 
             {/* Mobile hamburger */}
-            <button
+            {/* <button
               onClick={() => setMobileOpen((o) => !o)}
               className={`lg:hidden p-2 rounded-lg transition-colors ${
                 scrolled || mobileOpen ? 'text-forest-dark hover:bg-forest-50' : 'text-white hover:bg-white/10'
@@ -98,7 +98,7 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
             >
               <Icon name={mobileOpen ? 'close' : 'menu'} className="w-6 h-6" />
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -125,13 +125,13 @@ export default function Navbar() {
                 </NavLink>
               ))}
             </nav>
-            <Link
+            {/* <Link
               to="/support-us"
               onClick={() => setMobileOpen(false)}
               className="block w-full text-center px-6 py-3.5 rounded-full font-semibold bg-forest text-white hover:bg-forest-light transition-colors"
             >
               Support Us
-            </Link>
+            </Link> */}
           </div>
         </div>
       </header>
